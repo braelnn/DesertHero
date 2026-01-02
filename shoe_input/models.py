@@ -4,50 +4,49 @@ from django.contrib.auth.models import User
 
 
 class Shoe(models.Model):
-    SHOE_TYPES = [ 
-        ('NIKE SHOX', 'NIKE SHOX'),
-        ('TN AIRMAX', 'TN AIRMAX'),
-        ('SB.DUNK', 'SB.DUNK'),
-        ('PORTAL', 'PORTAL'),
+    SHOE_TYPES = [
+        ('ADDIDAS CASUALS', 'ADDIDAS CASUALS'),
+        ('ADDIDAS SAMBA', 'ADDIDAS SAMBA'),
+        ('ALEXANDER MC', 'ALEXANDER MC'),
+        ('AIRFORCE 1', 'AIRFORCE 1'),
         ('AIRMAX 95', 'AIRMAX 95'),
+        ('CONVERSE TYLOR', 'CONVERSE TYLOR'),
+        ('DR MARTEWS LOW CUT', 'DR MARTEWS LOW CUT'),
+        ('Dr. MARTENS', 'Dr. MARTENS'),
         ('JORDAN 1', 'JORDAN 1'),
+        ('JORDAN 11', 'JORDAN 11'),
         ('JORDAN 2', 'JORDAN 2'),
         ('JORDAN 3', 'JORDAN 3'),
         ('JORDAN 4', 'JORDAN 4'),
         ('JORDAN 5', 'JORDAN 5'),
         ('JORDAN 6', 'JORDAN 6'),
-        ('JORDAN 11', 'JORDAN 11'),
-        ('NIKE ZOOM', 'NIKE ZOOM'),
-        ('AIRFORCE 1', 'AIRFORCE 1'),
         ('LUIS VUITTON', 'LUIS VUITTON'),
-        ('ALEXANDER MC', 'ALEXANDER MC'),
-        ('Dr. MARTENS', 'Dr. MARTENS'),        
-        ('CONVERSE TYLOR', 'CONVERSE TYLOR'),
-        ('VANS KNU', 'VANS KNU'),
-        ('ADDIDAS SAMBA', 'ADDIDAS SAMBA'),
-        ('NB 530', 'NB 530'),
         ('NB 1000', 'NB 1000'),
+        ('NB 1906R', 'NB 1906R'),
+        ('NB 530', 'NB 530'),
         ('NB 740', 'NB 740'),
         ('NB 760', 'NB 760'),
-        ('NB 1906R', 'NB 1906R'),
         ('NB 9060 SEASALT', 'NB 9060 SEASALT'),
-        ('TIMBERLAND', 'TIMBERLAND'),
-        ('ADDIDAS CASUALS', 'ADDIDAS CASUALS'),
-        ('REEBOK', 'REEBOK'),
+        ('NIKE FASTAGE', 'NIKE FASTAGE'),
+        ('NIKE SHOX', 'NIKE SHOX'),
+        ('NIKE VOMERO 5', 'NIKE VOMERO 5'),
+        ('NIKE WORKOUT', 'NIKE WORKOUT'),
+        ('NIKE ZOOM', 'NIKE ZOOM'),
+        ('PORTAL', 'PORTAL'),
+        ('PUMA FENTY', 'PUMA FENTY'),
         ('PUMA JOGGER', 'PUMA JOGGER'),
         ('PUMA PARKSTYLE', 'PUMA PARKSTYLE'),
-        ('PUMA FENTY', 'PUMA FENTY'),
         ('PUMA SOFT-FOAM', 'PUMA SOFT-FOAM'),
         ('PUMA SUEDE', 'PUMA SUEDE'),
-        ('NIKE FASTAGE', 'NIKE FASTAGE'),
+        ('REEBOK', 'REEBOK'),
+        ('SB.DUNK', 'SB.DUNK'),
+        ('TIMBERLAND', 'TIMBERLAND'),
+        ('TN AIRMAX', 'TN AIRMAX'),
         ('TRAVIS SCOTT J1 LOW CUT', 'TRAVIS SCOTT J1 LOW CUT'),
-        ('NIKE WORKOUT', 'NIKE WORKOUT'),
-        ('DR MARTEWS LOW CUT', 'DR MARTEWS LOW CUT'),
-        ('NIKE VOMERO 5', 'NIKE VOMERO 5'),          
-       
-        
-    ]
-    
+        ('VANS KNU', 'VANS KNU'),
+
+    ]  
+          
     shoe_type = models.CharField(max_length=50, choices=SHOE_TYPES)
     size = models.IntegerField()
     color = models.CharField(max_length=50)
@@ -58,7 +57,8 @@ class Shoe(models.Model):
 
     user_added = models.ForeignKey(User, on_delete=models.CASCADE, default=1)  # Assuming user ID 1 exists
 
-
+    
 
     def __str__(self):
         return f"{self.shoe_type} - {self.size}"
+

@@ -8,8 +8,8 @@ from .forms import ShoeForm
 from .models import Shoe
 
 def dashboard(request):
+      # Fetch all shoes, sorted by shoe_type in ascending order
     shoes = Shoe.objects.all()
-    
     # Create a dictionary with shoe types dynamically from the database if not already set
     shoe_types = {}
     for shoe in shoes:
@@ -62,6 +62,7 @@ def add_shoe(request):
             return redirect('shoe_input:add_shoe')
     else:
         form = ShoeForm()
+
 
     return render(request, 'add_shoe.html', {'form': form})
 
