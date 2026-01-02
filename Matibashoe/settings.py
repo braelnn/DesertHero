@@ -26,6 +26,8 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-1e)lpfuki31e8o-ahsb7b
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
+DEBUG = True
+
 
 ALLOWED_HOSTS = [
     "desertheroplace.onrender.com",
