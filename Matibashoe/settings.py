@@ -90,7 +90,7 @@ WSGI_APPLICATION = 'Matibashoe.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=f'sqlite:///{BASE_DIR / "db.sqlite3"}',
+        default='postgresql://deserthero_database_user:OstGtTQ1rvNNUZOoyD3PGGTsmv8PE0ga@dpg-d5c158pr0fns739asvsg-a.virginia-postgres.render.com/deserthero_database',
         conn_max_age=600
     )
 }
