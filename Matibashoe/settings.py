@@ -27,7 +27,16 @@ SECRET_KEY = os.environ.get('SECRET_KEY', 'django-insecure-1e)lpfuki31e8o-ahsb7b
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.environ.get('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', '').split(',') if os.environ.get('ALLOWED_HOSTS') else []
+ALLOWED_HOSTS = [
+    "desertheroplace.onrender.com",
+    ".onrender.com",
+    "localhost",
+    "127.0.0.1",
+]
+CSRF_TRUSTED_ORIGINS = [
+    "https://desertheroplace.onrender.com",
+]
+
 
 
 # Application definition
