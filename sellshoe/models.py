@@ -32,5 +32,3 @@ class Sale(models.Model):
                 pass  # If the shoe doesn't exist, no image will be copied
 
         super().save(*args, **kwargs) 
-class Meta:
-    ordering = ['shoe_type']
