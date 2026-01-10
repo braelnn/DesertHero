@@ -84,8 +84,7 @@ def verify_code_view(request):
             user = request.user
 
             # Logic to check the email and show the modal
-            if user.email == 'patmatiba.1998@gmail.com':
-                # Set the flag to show the modal for 'patmatiba.1998@gmail.com'
+            if user.email == 'braelblecn13@gmail.com' or user.email == 'kalakoalice45@gmail.com':
                 request.session['show_dashboard_modal'] = True
                 return render(request, 'verify_code.html', {'show_modal': True})
 
